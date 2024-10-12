@@ -29,6 +29,7 @@ const Dashboard = () => {
             </ul>
           </div>
         </li>
+        <li className="border-top my-3"></li>
         <li className="mb-1">
           <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
             Dashboard
