@@ -23,9 +23,9 @@ const Dashboard = () => {
           </button>
           <div className="collapse show" id="home-collapse">
             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a></li>
+              <li><a href="Overview" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+              <li><a href="Updates" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
+              <li><a href="Reports" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a></li>
             </ul>
           </div>
         </li>
@@ -35,10 +35,10 @@ const Dashboard = () => {
           </button>
           <div className="collapse" id="dashboard-collapse">
             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
+              <li><a href="Overview" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+              <li><a href="Weekly" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
+              <li><a href="Monthly" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
+              <li><a href="Annually" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
             </ul>
           </div>
         </li>
@@ -49,10 +49,10 @@ const Dashboard = () => {
           </button>
           <div className="collapse" id="account-collapse">
             <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
-              <li><a href="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>
+              <li><a href="New" className="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>
+              <li><a href="Profile" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
+              <li><a href="Settings" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
+              <li><a href="Signout" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>
             </ul>
           </div>
         </li>
