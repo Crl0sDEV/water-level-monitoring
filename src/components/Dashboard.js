@@ -1,15 +1,22 @@
 import React, { useEffect } from 'react';
-import './Dashboard.css';  // Import custom styles
+import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import './Dashboard.css';  // Your custom styles
 
 const Dashboard = () => {
+  const navigate = useNavigate(); // useNavigate replaces useHistory
 
-    useEffect(() => {
-        // Ensure Bootstrap is available globally
-        const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-        tooltipTriggerList.forEach(tooltipTriggerEl => {
-          new window.bootstrap.Tooltip(tooltipTriggerEl); // Reference bootstrap from window object
-        });
-      }, []);
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem('authenticated');
+    if (isAuthenticated !== 'true') {
+      navigate('/login'); // Replace history.push with navigate
+    }
+
+    // Bootstrap tooltip activation
+    const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(tooltipTriggerEl => {
+      new window.bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  }, [navigate]); // Update the dependency array to use 'navigate'
 
   return (
     <div className="flex-shrink-0 p-3" style={{ width: '280px' }}>
@@ -53,7 +60,10 @@ const Dashboard = () => {
               <li><a href="New" className="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>
               <li><a href="Profile" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
               <li><a href="Settings" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
-              <li><a href="Signout" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>
+              <li><a href="Signout" className="link-body-emphasis d-inline-flex text-decoration-none rounded" onClick={() => {
+                localStorage.removeItem('authenticated');
+                navigate('/login'); // Replace history.push with navigate
+              }}>Sign out</a></li>
             </ul>
           </div>
         </li>
